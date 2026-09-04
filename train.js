@@ -1,3 +1,21 @@
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK B &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+function countnumber(text) {
+  let count = 0;
+  let i = 0;
+  while (i < text.length) {
+    if (text[i] >= 0 && text[i] <= 9) {
+      count++;
+    }
+    i++;
+  }
+  return count;
+}
+console.log(countnumber("Assalom9"));
+console.log(countnumber("5789tatelefon"));
+console.log(countnumber("25yillik"));
+console.log(countnumber("Assalom9"));
+
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK A &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
 // function countLetter(letter, word) {
