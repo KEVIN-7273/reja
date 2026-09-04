@@ -1,24 +1,24 @@
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK A &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
-function countLetter(letter, word) {
-  let count = 0;
-  let i = 0;
-  while (i < word.length) {
-    if (word[i] === letter) {
-      /* string ichidagi har bir harfga index (raqam) beriladi.*/
-      count++;
-    }
-    i++;
-  }
-  if (count === 0) {
-    return "Bunday harf bu so'zda qatnashmagan";
-  }
-  return count;
-}
+// function countLetter(letter, word) {
+//   let count = 0;
+//   let i = 0;
+//   while (i < word.length) {
+//     if (word[i] === letter) {
+//       /* string ichidagi har bir harfga index (raqam) beriladi.*/
+//       count++;
+//     }
+//     i++;
+//   }
+//   if (count === 0) {
+//     return "Bunday harf bu so'zda qatnashmagan";
+//   }
+//   return count;
+// }
 
-console.log(countLetter("b", "Uzbekistanbbbbb"));
-console.log(countLetter("A", "KevinAA"));
-console.log(countLetter("e", "engineer"));
+// console.log(countLetter("b", "Uzbekistanbbbbb"));
+// console.log(countLetter("A", "KevinAA"));
+// console.log(countLetter("e", "engineer"));
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 22. Asynchronous functionlarni qollash &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 // console.log("Jack Ma maslahatlari");
