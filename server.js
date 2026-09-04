@@ -1,5 +1,4 @@
 const http = require("http");
-
 const mongodb = require("mongodb");
 
 let db;
@@ -15,7 +14,7 @@ mongodb.connect(
   (err, client) => {
     if (err) console.log("ERROR on connection MongoDB");
     else {
-      console.log("MongoDB connection secceed");
+      console.log("MongoDB connection succeed");
       module.exports = client;
       const app = require("./app");
       const server = http.createServer(app);
