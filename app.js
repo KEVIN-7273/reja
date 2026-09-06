@@ -16,6 +16,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 // MongoDB chaqirish
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // 1 - Kirish
 app.use(express.static("public"));
@@ -37,9 +38,19 @@ app.post("/create-item", (req, res) => {
   });
 });
 
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "succes" });
+    },
+  );
 });
+
+// app.get("/author", (req, res) => {
+//   res.render("author", { user: user });
+// });
 
 app.get("/", function (req, res) {
   console.log("user entered /");
