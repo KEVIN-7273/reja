@@ -1,20 +1,42 @@
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK C &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+function comparetexts(text1, text2) {
+  if (text1.length === text2.length) {
+    let i = 0;
+    while (i < text1.length) {
+      if (text2.includes(text1[i])) {
+      } else {
+        return false;
+      }
+      i++;
+    }
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(comparetexts("bobur", "rubob"));
+console.log(comparetexts("Mashaqqat", "mashaqqat"));
+console.log(comparetexts("mitgroup", "gmtiprou"));
+
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK B &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
-function countnumber(text) {
-  let count = 0;
-  let i = 0;
-  while (i < text.length) {
-    if (text[i] >= 0 && text[i] <= 9) {
-      count++;
-    }
-    i++;
-  }
-  return count;
-}
-console.log(countnumber("Assalom9"));
-console.log(countnumber("5789tatelefon"));
-console.log(countnumber("25yillik"));
-console.log(countnumber("Assalom9"));
+// function countnumber(text) {
+//   let count = 0;
+//   let i = 0;
+//   while (i < text.length) {
+//     if (text[i] >= 0 && text[i] <= 9) {
+//       count++;
+//     }
+//     i++;
+//   }
+//   return count;
+// }
+// console.log(countnumber("Assalom9"));
+// console.log(countnumber("5789tatelefon"));
+// console.log(countnumber("25yillik"));
+// console.log(countnumber("Assalom9"));
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK A &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
