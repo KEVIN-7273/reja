@@ -1,24 +1,62 @@
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK C &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK D &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
 
-function comparetexts(text1, text2) {
-  if (text1.length === text2.length) {
-    let i = 0;
-    while (i < text1.length) {
-      if (text2.includes(text1[i])) {
-      } else {
-        return false;
-      }
-      i++;
-    }
-    return true;
-  } else {
-    return false;
+  getTime() {
+    let now = new Date();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    return `${hour}:${minute}`;
+  }
+
+  qoldiq() {
+    console.log(
+      `hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`,
+    );
+  }
+
+  sotish(product, amount) {
+    this[product] -= amount;
+    console.log(` ${amount}ta ${product} sotildi!`);
+  }
+
+  qabul(product, amount) {
+    this[product] += amount;
+    console.log(` ${amount}ta ${product} qabul qilindi!`);
   }
 }
 
-console.log(comparetexts("bobur", "rubob"));
-console.log(comparetexts("Mashaqqat", "mashaqqat"));
-console.log(comparetexts("mitgroup", "gmtiprou"));
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish("non", 2);
+shop.qabul("cola", 1);
+shop.qoldiq();
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK C &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+// function comparetexts(text1, text2) {
+//   if (text1.length === text2.length) {
+//     let i = 0;
+//     while (i < text1.length) {
+//       if (text2.includes(text1[i])) {
+//       } else {
+//         return false;
+//       }
+//       i++;
+//     }
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(comparetexts("bobur", "rubob"));
+// console.log(comparetexts("Mashaqqat", "mashaqqat"));
+// console.log(comparetexts("mitgroup", "gmtiprou"));
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK B &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
