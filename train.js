@@ -1,40 +1,62 @@
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK D &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK F &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
-  getTime() {
-    let now = new Date();
-    let hour = now.getHours();
-    let minute = now.getMinutes();
-    return `${hour}:${minute}`;
+function findDoublers(text) {
+  let count = {};
+  let i = 0;
+  while (i < text.length) {
+    let harf = text[i];
+    if (count[harf]) {
+      return true;
+    } else {
+      count[harf] = 1;
+    }
+    i++;
   }
-
-  qoldiq() {
-    console.log(
-      `hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`,
-    );
-  }
-
-  sotish(product, amount) {
-    this[product] -= amount;
-    console.log(` ${amount}ta ${product} sotildi!`);
-  }
-
-  qabul(product, amount) {
-    this[product] += amount;
-    console.log(` ${amount}ta ${product} qabul qilindi!`);
-  }
+  return false;
 }
 
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish("non", 2);
-shop.qabul("cola", 1);
-shop.qoldiq();
+console.log(findDoublers("Assalom"));
+console.log(findDoublers("dsakjdlaks"));
+console.log(findDoublers("sdajasndjkas"));
+console.log(findDoublers("kitob"));
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK D &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   getTime() {
+//     let now = new Date();
+//     let hour = now.getHours();
+//     let minute = now.getMinutes();
+//     return `${hour}:${minute}`;
+//   }
+
+//   qoldiq() {
+//     console.log(
+//       `hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`,
+//     );
+//   }
+
+//   sotish(product, amount) {
+//     this[product] -= amount;
+//     console.log(` ${amount}ta ${product} sotildi!`);
+//   }
+
+//   qabul(product, amount) {
+//     this[product] += amount;
+//     console.log(` ${amount}ta ${product} qabul qilindi!`);
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish("non", 2);
+// shop.qabul("cola", 1);
+// shop.qoldiq();
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK C &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
