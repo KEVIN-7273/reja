@@ -1,24 +1,44 @@
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK F &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK E &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
-function findDoublers(text) {
-  let count = {};
-  let i = 0;
-  while (i < text.length) {
-    let harf = text[i];
-    if (count[harf]) {
-      return true;
-    } else {
-      count[harf] = 1;
-    }
-    i++;
+function getReverse(text) {
+  let result = "";
+  let i = text.length - 1; // ← oxirgi harfdan boshla!
+  while (i >= 0) {
+    result = result + text[i];
+    i--; // ← oldinga emas, orqaga!
   }
-  return false;
+  return result;
 }
 
-console.log(findDoublers("Assalom"));
-console.log(findDoublers("dsakjdlaks"));
-console.log(findDoublers("sdajasndjkas"));
-console.log(findDoublers("kitob"));
+console.log(getReverse("hello"));
+console.log(getReverse("Bobur"));
+console.log(getReverse("Unique"));
+console.log(getReverse("Ambitious"));
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK F &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+// function findDoublers(text) {
+//   // hello
+//   let count = {};
+//   let i = 0;
+//   while (i < text.length) {
+//     let harf = text[i];
+//     if (count[harf]) {
+//       return true;
+//     } else {
+//       count[harf] = 999;
+//     }
+//     i++;
+//   }
+//   return false;
+// }
+
+// //
+
+// console.log(findDoublers("Assalom"));
+// console.log(findDoublers("dsakjdlaks"));
+// console.log(findDoublers("sdajasndjkas"));
+// console.log(findDoublers("kitob2"));
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK D &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 // class Shop {
