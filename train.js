@@ -2,10 +2,10 @@
 
 function getReverse(text) {
   let result = "";
-  let i = text.length - 1; // ← oxirgi harfdan boshla!
+  let i = text.length - 1; // oxirgi harfdan boshla!
   while (i >= 0) {
     result = result + text[i];
-    i--; // ← oldinga emas, orqaga!
+    i--; // oldinga emas, orqaga!
   }
   return result;
 }
