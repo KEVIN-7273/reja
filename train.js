@@ -1,19 +1,37 @@
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK E &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-
-function getReverse(text) {
-  let result = "";
-  let i = text.length - 1; // oxirgi harfdan boshla!
-  while (i >= 0) {
-    result = result + text[i];
-    i--; // oldinga emas, orqaga!
+function getHighestIndex(arr) {
+  let maxValue = arr[0]; // birinchi element loop boshidagi
+  let maxIndex = 0;
+  let i = 0;
+  while (i < arr.length) {
+    if (arr[i] > maxValue) {
+      maxValue = arr[i];
+      maxIndex = i;
+    }
+    i++;
   }
-  return result;
+  return maxIndex;
 }
 
-console.log(getReverse("hello"));
-console.log(getReverse("Bobur"));
-console.log(getReverse("Unique"));
-console.log(getReverse("Ambitious"));
+console.log(getHighestIndex([4, 3, 5, 723, 23]));
+console.log(getHighestIndex([5, 21, 12, 21, 8]));
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK E &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+// function getReverse(text) {
+//   let result = "";
+//   let i = text.length - 1; // oxirgi harfdan boshla!
+//   while (i >= 0) {
+//     result = result + text[i];
+//     i--; // oldinga emas, orqaga!
+//   }
+//   return result;
+// }
+
+// console.log(getReverse("hello"));
+// console.log(getReverse("Bobur"));
+// console.log(getReverse("Unique"));
+// console.log(getReverse("Ambitious"));
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK F &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
