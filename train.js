@@ -1,20 +1,35 @@
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK E &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
-function getHighestIndex(arr) {
-  let maxValue = arr[0]; // birinchi element loop boshidagi
-  let maxIndex = 0;
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK H &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+function getPositive(arr) {
+  let newPositive = "";
   let i = 0;
   while (i < arr.length) {
-    if (arr[i] > maxValue) {
-      maxValue = arr[i];
-      maxIndex = i;
+    if (arr[i] > 0) {
+      newPositive = newPositive + arr[i];
     }
     i++;
   }
-  return maxIndex;
+  return newPositive;
 }
 
-console.log(getHighestIndex([4, 3, 5, 723, 23]));
-console.log(getHighestIndex([5, 21, 12, 21, 8]));
+console.log(getPositive([1, 0, -5, 4, 8]));
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK G &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+// function getHighestIndex(arr) {
+//   let maxValue = arr[0]; // birinchi element loop boshidagi
+//   let maxIndex = 0;
+//   let i = 0;
+//   while (i < arr.length) {
+//     if (arr[i] > maxValue) {
+//       maxValue = arr[i];
+//       maxIndex = i;
+//     }
+//     i++;
+//   }
+//   return maxIndex;
+// }
+
+// console.log(getHighestIndex([4, 3, 5, 723, 23]));
+// console.log(getHighestIndex([5, 21, 12, 21, 8]));
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& MIT TASK E &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
